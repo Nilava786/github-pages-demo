@@ -45,12 +45,39 @@ body {
     background-color: #3700b3;
   }
   
-  /* Form Styles */
+  /* About Section */
+  .about {
+    margin-top: 2rem;
+  }
+  
+  /* Contact Form Styles */
   form {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark form {
+    background: #1e1e1e;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .form-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
   }
   
   input, textarea {
@@ -58,6 +85,10 @@ body {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
+  }
+  
+  .full-width {
+    grid-column: span 2;
   }
   
   /* Footer */
@@ -91,5 +122,16 @@ body {
   body.dark button:hover, 
   body.dark .toggle-btn:hover {
     background-color: #9f6ded;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .full-width {
+      grid-column: span 1;
+    }
   }
   
