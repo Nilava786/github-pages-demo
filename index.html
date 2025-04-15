@@ -7,8 +7,36 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to My GitHub Page 🚀</h1>
-  <p>This static site is hosted using GitHub Pages.</p>
-  <button onclick="alert('Thanks for visiting!')">Click Me</button>
+  <div class="container">
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
+    <h1>Welcome to My GitHub Page 🚀</h1>
+    <p>This static site is hosted using GitHub Pages.</p>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I'm a developer passionate about web tech, DevOps, and building cool stuff!</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 | Built with ❤️ by Me</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </body>
 </html>
